@@ -4,12 +4,14 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-009688.svg)](https://fastapi.tiangolo.com)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.116.1-009688.svg)](https://fastapi.tiangolo.com)
 [![AI/ML](https://img.shields.io/badge/AI%2FML-PyTorch%20%7C%20Transformers-orange.svg)](https://pytorch.org/)
+[![GitHub Actions](https://github.com/siddi7/Smart-Shopping-MultiAgent-AI/workflows/Test%20Deployment/badge.svg)](https://github.com/siddi7/Smart-Shopping-MultiAgent-AI/actions)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Available-brightgreen.svg)](https://github.com/siddi7/Smart-Shopping-MultiAgent-AI)
 
-> **Revolutionary Multi-Agent AI System for Hyper-Personalized E-commerce Experiences**
-
-Transform your e-commerce platform with cutting-edge multi-agent AI technology that delivers unprecedented personalization, real-time recommendations, and explainable AI insights.
+> **🏆 Revolutionary Multi-Agent AI System for Hyper-Personalized E-commerce Experiences**
+> 
+> **Built for the Accenture Hackathon** - Transform your e-commerce platform with cutting-edge multi-agent AI technology that delivers unprecedented personalization, real-time recommendations, and explainable AI insights.
 
 ## 🌟 Key Features
 
@@ -52,7 +54,7 @@ Transform your e-commerce platform with cutting-edge multi-agent AI technology t
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/Smart-Shopping-MultiAgent-AI.git
+git clone https://github.com/siddi7/Smart-Shopping-MultiAgent-AI.git
 cd Smart-Shopping-MultiAgent-AI
 ```
 
@@ -83,6 +85,53 @@ python main.py
 ```
 
 The system will be available at `http://localhost:8000`
+
+## 🚀 Live Demonstration
+
+### 🎥 Quick Start Demo
+```bash
+# 1. Run the interactive demo
+python demo.py
+
+# 2. Start the API server
+python main.py
+# OR using uvicorn directly
+python -m uvicorn main:app --reload --port 8000
+
+# 3. Open your browser and visit:
+# - API Documentation: http://localhost:8000/docs
+# - Alternative Docs: http://localhost:8000/redoc
+# - Health Check: http://localhost:8000/health
+```
+
+### 📈 Dashboard Access
+The real-time dashboard is available after starting the API server:
+- **Dashboard URL**: `http://localhost:8000/dashboard`
+- **Features**: Real-time metrics, agent monitoring, interactive visualizations
+- **Technology**: React with Ant Design and Recharts
+
+### 📝 API Testing
+Test the system with sample requests:
+```bash
+# Test customer analysis
+curl -X POST "http://localhost:8000/api/customers/analyze" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "customer_id": "demo_customer_001",
+    "interaction_data": {},
+    "analysis_type": "comprehensive"
+  }'
+
+# Test recommendation generation
+curl -X POST "http://localhost:8000/api/recommendations/generate" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "customer_id": "demo_customer_001",
+    "context": {"page_type": "homepage"},
+    "num_recommendations": 5,
+    "include_explanations": true
+  }'
+```
 
 ## 📖 API Documentation
 
